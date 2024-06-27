@@ -6,6 +6,7 @@ body{
     background-color: black;
     color: white;
     /* border: 2px solid red; */
+    widht: 100%;
 }
 
 nav{
