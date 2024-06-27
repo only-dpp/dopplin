@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+nav{
+    background: black;
+    
+  border-bottom: 15px solid red;
+        display: flex;
+    height: 80px;
+    align-items: center;
+}
+
+a{
+    display: flex;
+    position: relative;
+    left: 1500px;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: white;
+    color: black;
+    border: 5px 5px;
+    border-radius: 5px;
+}
+
+
+h1{
+    color: white;
+    padding: 15px;
+    font-size: 50px;
+}
+
+.RichardYago{
+    margin: 15px;
+}
+
+.RichardYago p{
+
+        font-size: 25px;
+
+
+}
+
+.RichardYago img{
+    float: left;
+    position: relative;
+    left: 1500px;
+    border: 2px solid red;
+    display: flex;
+    
+}
