@@ -5,18 +5,22 @@
 body{
     background-color: black;
     color: white;
+    /* border: 2px solid red; */
 }
 
 nav{
-    background: black;
-    
-  border-bottom: 15px solid red;
-        display: flex;
+   /* border: 2px solid red;  */
+    background: black; 
+    border-bottom: 15px solid red;
+    display: flex;
     height: 80px;
     align-items: center;
+
+  
+   
 }
 
-a{
+nav a{
     display: flex;
     position: relative;
     left: 1500px;
@@ -41,7 +45,13 @@ h1{
 
 .RichardYago{
     margin: 15px;
+    /* border: 2px solid red; */
+    height: 650px;
+    
+    
 }
+
+
 
 .RichardYago p{
 
@@ -51,10 +61,22 @@ h1{
 }
 
 .RichardYago img{
-    float: left;
+    /* /* float: left; */
     position: relative;
     left: 1500px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
-    
+    bottom: 380px;
 }
+
+.sobre-mim{
+    /* border: 2px solid red; */
+    width: 1450px;
+}
+
+
+.segunda-sessao{
+    border-top: 15px solid red;
+    /* border: 2px solid red; */
+}
+
