@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url(img/rain.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.hello-kitty {
+    width: 100px;
+    align-items: center;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.contanier-profile {
+    background-color: rgb(63, 62, 62);
+    width: 300px;
+    border-radius: 25px;
+    display: flex;
+    overflow: hidden;
+   
+    margin-top: 25px;
+    
+}
+
+.contanier-profile h1{
+    font-size: 190%;
+    color: whitesmoke;
+    font-family: 'Uni Sans';
+}
+
+.link a {
+    text-decoration: none;
+    color: white;
+}
+
+.status {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    float: right;
+    border-bottom: 50px;
+    background-color: green;
+}
+
+
+
+.page {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 3px solid white;
+    border-radius: 15px;
+    margin: 15px;
+    margin-left: 25%;
+    margin-right: 10%;
+    height: 60%;
+}
+
+.message{
+    background-color: rgba(48, 48, 48, 0.90);
+    border: 1px solid rgb(41, 41, 41);
+    margin: 20px;
+    height: 25%px;
+    text-align: center;
+    border-radius: 10px;
+   
+}
+
+.message h1 {
+    font-size: large;
+    color: white;
+}
+
+.links {
+        display: flex;
+        gap: 40px;
+        font-size: 24px;
+        justify-content: space-between;
+        height: 300px;
+        align-items: center;
+}
+
+.links a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    font-size: 50px;
+}
+
+.content-links {
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+    width: 100%;
+    max-width: 600px;
+    align-items: center;
+    margin-left: 35%;
+    
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'Uni Sans';
+    src: url(fontes/Uni\ Sans\ Heavy\ Italic.otf);
+    font-weight: normal;
+    font-style: normal;
+}
