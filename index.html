@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barra de Seleção</title>
+    <title>O quanto vc me ama em?rsrs❤</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
+            background-color: rgb(165, 149, 149);
         }
         .container {
             margin-top: 50px;
+            color: black;
+          
         }
         #valor {
             font-size: 24px;
@@ -34,10 +37,11 @@
         <button onclick="enviar()">Enviar</button>
         <div id="mensagem2">Você ama o Dopplin_ em 100%</div>
         <div id="mensagem">Nossa, vc ama tanto assim eu? rsrs, também te amo fofo(a)</div>
-       
     </div>
 
     <script>
+        var cliqueContador = 0; // Variável para contar os cliques
+
         function atualizarValor() {
             var slider = document.getElementById("slider");
             var valor = document.getElementById("valor");
@@ -50,13 +54,28 @@
             slider.value = 100;
             atualizarValor();
 
-            // Exibe a mensagem "Parabéns!"
+            // Exibe a mensagem inicial
             var mensagem = document.getElementById("mensagem");
-            mensagem.style.display = "block";
-
-            // Exibe a mensagem "Você escolheu 100%"
             var mensagem2 = document.getElementById("mensagem2");
+
+            // A cada clique, altera a mensagem
+            if (cliqueContador === 0) {
+                mensagem.textContent = "Nossa, vc ama tanto assim eu? rsrs, também te amo fofo(a)";
+                mensagem2.textContent = "Você ama o Dopplin_ em 100%";
+            } else if (cliqueContador === 1) {
+                mensagem.textContent = "Admita q vc ama eu 100% bobinho(a), rsrs deixa de brincadeira!😄";
+                mensagem2.textContent = "Você realmente ama o Dopplin_ em 100%! Que fofura!";
+            } else {
+                mensagem.textContent = "Uau! Isso é um amor incondicional! 😆";
+                mensagem2.textContent = "Já escolheu 100% mais de uma vez, né? Haha!";
+            }
+
+            // Exibe as mensagens
+            mensagem.style.display = "block";
             mensagem2.style.display = "block";
+
+            // Incrementa o contador de cliques
+            cliqueContador++;
         }
     </script>
 </body>
