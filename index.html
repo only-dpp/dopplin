@@ -3,50 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Dopplin</title>
+    <title>Barra de Seleção</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        #valor {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #mensagem, #mensagem2 {
+            display: none;
+            margin-top: 20px;
+            font-size: 20px;
+            color: green;
+        }
+    </style>
 </head>
 <body>
-    <div class="contanier-profile">
-        <img class="hello-kitty" src="img/hello kitty.jpg" alt="">
-        <div class="sub-contanier">
-        <h1>Dopplin_</h1>
-        <div class="link">
-            <a href="https://www.instagram.com/dopplin_/">@dopplin_</a>
-           
-    </div>
-    <div class="status"></div>
-    </div>
-</div>
-
-
-<div class="page">
-    <div class="content-page">
-
-        <div class="message">
-            <h1>Oi eu sou dopplin_ rsrs</h1>
-            <p></p>
-        </div>
-        <div class="content-links">
-        <div class="links">
-           <iframe src="https://discord.com/widget?id=1307743963620573215&theme=dark" width="250" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> 
-        </div>
+    <h1>O quanto vc ama o richard?❤</h1>
+    <div class="container">
+        <input type="range" id="slider" min="0" max="100" value="50" step="1" oninput="atualizarValor()">
+        <div id="valor">50%</div>
+        <br><br>
+        <button onclick="enviar()">Enviar</button>
+        <div id="mensagem2">Você ama o richar em 100%</div>
+        <div id="mensagem">Nossa, vc ama tanto assim eu? rsrs, também te amo fofo(a)</div>
+       
     </div>
 
-    
-</div>
+    <script>
+        function atualizarValor() {
+            var slider = document.getElementById("slider");
+            var valor = document.getElementById("valor");
+            valor.textContent = slider.value + "%";
+        }
 
-</div>
+        function enviar() {
+            // Atualiza o valor da barra para 100%
+            var slider = document.getElementById("slider");
+            slider.value = 100;
+            atualizarValor();
 
+            // Exibe a mensagem "Parabéns!"
+            var mensagem = document.getElementById("mensagem");
+            mensagem.style.display = "block";
 
-
-
-
-
-
-
-
-
+            // Exibe a mensagem "Você escolheu 100%"
+            var mensagem2 = document.getElementById("mensagem2");
+            mensagem2.style.display = "block";
+        }
+    </script>
 </body>
 </html>
